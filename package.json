@@ -1,0 +1,31 @@
+{
+  "name": "next-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.7",
+    "node": "^18.20.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0-rc.2",
+    "react-paginate": "^8.3.0",
+    "react-quill-new": "^3.3.3",
+    "react-slick": "^0.30.3",
+    "react-sticky-box": "^2.0.5",
+    "react-toastify": "^11.0.5",
+    "sass": "^1.85.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7"
+  }
+}

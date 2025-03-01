@@ -1,0 +1,49 @@
+@import "../styles/Component.scss";
+.posts-content{   
+    &.trending{
+        margin-top: 25px;
+        padding:0;
+        .title-container{
+            padding:0 15px;
+        }
+    }   
+    .trending-list{
+        margin-top: 20px;
+        .item{
+            padding:10px 15px;
+            background-color:$light-gray;
+            font-size: 14px;
+            border-radius: 20px;
+            @extend .d-flex;
+        }
+        .swiper {
+            padding:0 15px;
+        }
+        .swiper-slide {
+            width:auto;
+          }
+    
+    }
+    &.related{
+        padding:0;
+        .swiper {
+            padding:0 15px;
+        }
+        
+        .article{
+            margin:0;
+           // padding-right:15px;
+            .thumb{
+                width: 80px;
+                height:80px;
+            }
+            .details{
+                width: calc(100% - 100px);
+                .featured-date{
+                    margin-top:4px;
+                }
+            }
+        }
+    }
+    
+}

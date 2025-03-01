@@ -1,0 +1,43 @@
+@import "../styles/Component.scss";
+header{
+    height:100px;
+    background-color: transparent;
+    @extend .d-flex;   
+    ul{
+        @extend .d-flex;
+        list-style: none;
+        li{
+            font-size:$text-sm;
+            padding:10px 15px;   
+            color:$black;
+            a{
+                color:inherit;
+                text-decoration: none;
+                &.active{
+                    color:$primary;
+                }
+            }
+        }
+    } 
+    .logo{
+        font-size:$text-lg;
+        width:6vw;
+    }
+    .menu-center{
+        flex:1
+    }
+    .menu-right{
+        ul{
+            justify-content: end;
+            li{
+                &.btn{
+                    color:$white;
+                    &.outline{
+                        color:$black;
+                        margin-left:15px;
+                    }
+                }
+            }
+        }
+    }
+}
