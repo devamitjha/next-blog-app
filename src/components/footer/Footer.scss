@@ -1,0 +1,180 @@
+@import "../styles/Component.scss";
+.relative{
+    position: relative;
+    z-index: 2;
+}
+.container{
+    &.footer-container{
+        border-top:1px solid $boxes-border-color;
+        background-color:$boxes-background-color;
+        margin-top: 80px;
+        padding-bottom:40px;
+        position: relative;
+        overflow: hidden;
+        .copyright{
+            @extend .d-flex;
+            margin-top:20px;
+            p{
+                margin:0;
+                font-size:$text-xsm;
+            }
+        }
+    }
+}
+.section-footer{
+    @extend .d-flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    padding-top:60px;
+    width:100%;   
+    .item{        
+        padding: 35px 40px;
+        @extend .d-flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        &.section-newsletter{
+            width:35%;
+            padding-left:0;
+            border-right:1px solid $boxes-border-color; 
+            .item-content{
+                p{
+                    font-size:$text-sm;
+                    margin-bottom:20px;
+                    color:$black;
+                    line-height: 1.8;
+                }
+                a{
+                    font-size:$text-sm;
+                    margin-bottom:20px;
+                    color:$black;
+                    line-height: 1.8;
+                    display: inline-block;
+                    text-decoration: none;
+                }
+            }
+            .footer-input{
+                margin-bottom:40px;
+                .form-group{
+                    @extend .d-flex;
+                    justify-content: space-between;
+                    position: relative;
+                    .inputbox{
+                        width:100%;
+                        height:56px;
+                        padding:5px 170px 5px 15px;
+                        border:none;
+                        box-shadow: $small-shadow;
+                        border-radius: 8px;
+                        font-size:$text-sm;
+                        color:$text-color;
+                        font-weight: 600;
+                        &:focus{
+                            outline:none;
+                        }
+                        &::placeholder{
+                            color:$text-color;
+                            font-weight: 600;
+                        }
+                    }
+                    .submit{
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        height:56px;
+                        width:160px;
+                        color:$white;
+                        padding:0;
+                        @extend .d-flex;
+                        cursor: pointer;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+            }
+
+        }
+        &.quick-links{
+            width:30%;
+            height:100%; 
+            ul{
+                margin:0;
+                padding:0 0 0 50px;
+                list-style-type: none;
+                width:100%;
+                li{
+                    font-size:$text-sm;
+                    color:$black;
+                    padding:15px 0;
+                    a{
+                        color:inherit;
+                        text-decoration: none;
+                    }
+                    +li{
+                        border-top:1px solid $boxes-border-color;
+                    }
+                }
+            }
+        }
+        &.latest-article{
+            width:35%;
+            padding-right:0;
+            border-left:1px solid $boxes-border-color;
+            height: auto;  
+        }
+    }
+    
+}
+.ocean { 
+    height:1%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: rgba($primary, .1);
+    z-index: 1;    
+    .wave {
+        background: url("../../assets/images/wave.svg") repeat-x; 
+        position: absolute;
+        top: -198px;
+        width: 6400px;
+        height: 198px;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+        opacity: .1;
+        &:nth-of-type(2) {
+            top: -175px;
+            animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+            opacity: .15;
+          }
+        &:nth-of-type(3) {
+            top: -130px;
+            animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+            opacity: .15;
+        }
+      }
+      @keyframes wave {
+        0% {
+          margin-left: 0;
+        }
+        100% {
+          margin-left: -1600px;
+        }
+      }
+      
+      @keyframes swell {
+        0%, 100% {
+          transform: translate3d(0,-25px,0);
+        }
+        50% {
+          transform: translate3d(0,5px,0);
+        }
+      }
+      
+  }
+  
+  
+ 
+  
+  

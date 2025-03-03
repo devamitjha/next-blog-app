@@ -31,9 +31,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={beVietnamPro.variable}>
-        <Header/>
-        {children}
-        <Footer/>
+        <div className="blogApp">
+          <Header/>
+          {children}
+          <Footer/>
+        </div>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -21,7 +21,7 @@ const FeatureSlider = ({date}) => {
                  <SwiperSlide>
                     <div className="article">
                         <div className="thumb">
-                            <img src={Thumb} alrt="thumb"/>
+                            <img src={Thumb} alt="thumb"/>
                         </div>
                         <div className="details">
                         <h4><Link to="#" className="hover">Animals that captivate people with their intelligence</Link></h4>
@@ -44,7 +44,7 @@ const FeatureSlider = ({date}) => {
                  <SwiperSlide>
                     <div className="article">
                         <div className="thumb">
-                            <img src={Thumb} alrt="thumb"/>
+                            <img src={Thumb} alt="thumb"/>
                         </div>
                         <div className="details">
                         <h4><Link to="#" className="hover">Animals that captivate people with their intelligence</Link></h4>
@@ -67,7 +67,7 @@ const FeatureSlider = ({date}) => {
                  <SwiperSlide>
                     <div className="article">
                         <div className="thumb">
-                            <img src={Thumb} alrt="thumb"/>
+                            <img src={Thumb} alt="thumb"/>
                         </div>
                         <div className="details">
                         <h4><Link to="#" className="hover">Animals that captivate people with their intelligence</Link></h4>
@@ -90,7 +90,7 @@ const FeatureSlider = ({date}) => {
                  <SwiperSlide>
                     <div className="article">
                         <div className="thumb">
-                            <img src={Thumb} alrt="thumb"/>
+                            <img src={Thumb} alt="thumb"/>
                         </div>
                         <div className="details">
                         <h4><Link to="#" className="hover">Animals that captivate people with their intelligence</Link></h4>
@@ -113,7 +113,7 @@ const FeatureSlider = ({date}) => {
                  <SwiperSlide>
                     <div className="article">
                         <div className="thumb">
-                            <img src={Thumb} alrt="thumb"/>
+                            <img src={Thumb} alt="thumb"/>
                         </div>
                         <div className="details">
                         <h4><Link to="#" className="hover">Animals that captivate people with their intelligence</Link></h4>
