@@ -1,0 +1,265 @@
+@use "../../components/styles/Component" as *;
+.contact-body{
+    background-color:#f0f2f5;
+    .container{
+        &.footer-container{
+            border: none;
+            background-color: transparent;
+           .container{
+                border-radius: 16px;
+                padding:25px;
+                background-image: linear-gradient(360deg, transparent 0 30%, #FFF 70% 100%);
+                .section-footer{
+                    padding-top:0;
+                }
+           }
+        }
+        .section-footer{
+            .item{
+                &.section-newsletter{
+                    border-right-color:#dbdfe5;
+                }
+                &.latest-article{
+                    border-left-color:#dbdfe5;
+                }
+                &.quick-links{
+                    li{
+                        +li{
+                            border-top-color:#dbdfe5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-contact{
+    @extend .d-flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top:60px;
+    .personal-container{
+        width:32%;
+        border-radius: 16px;
+        background-color: $white;
+        box-shadow: 0 1px 2px 0 rgba(26, 31, 44, .25);       
+            .profile-card{
+                padding:25px;
+                .avatar-container{
+                    @extend .d-flex;
+                    width: 100%;
+                    background-color: #f0f2f5;
+                    border-radius: 8px;
+                    img{
+                        display: block;
+                        margin-top: 15px;
+                    }
+                }
+                .bio{
+                    margin:24px 0;
+                    h3{
+                        font-size:$text-lg;
+                        color:$black;
+                        margin-bottom:12px;
+                    }
+                    p{
+                        font-size:16px;
+                        color:$text-color;
+                        line-height: 1.5;
+                        span{
+                            font-weight: 600;
+                            color:$black;
+                        }
+                    }
+                }
+                .btn-group{
+                    @extend .d-flex;
+                    justify-content: space-between;
+                    gap:4%;
+                    .btn{
+                        @extend .d-flex;
+                        padding:0;
+                        width:48%;
+                        height:56px;
+                        font-size:$text-sm;
+                        font-weight: 600;
+                        color:$black;
+                        &.bookacall{
+                            color:$white;
+                            .icon-set{
+                                border:none;
+                                background-color:transparent;
+                                width:auto;
+                                .fa{
+                                    color:$white;
+                                    margin-top:4px;
+                                    margin-right:8px;
+                                }
+                            }
+                            
+                        }
+                        &.copyemail{
+                            .icon-set{
+                                border:none;
+                                background-color:transparent;
+                                width:auto;
+                                .fa{
+                                    color:$black;
+                                    margin-top:2px;
+                                    margin-right:8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social-section{
+                    margin-top:30px;
+                    @extend .d-flex;
+                    justify-content: flex-start;                    
+                }
+            }        
+    }
+    .contact-section{
+        width:65%;              
+        .contact-container{
+            padding: 48px 40px 40px;
+            border-radius: 16px;
+            background-color: $white;
+            box-shadow: 0 1px 2px 0 rgba(26, 31, 44, .25); 
+            .section-title{
+                margin-bottom:0;
+                h3{
+                    font-size:$text-lg;
+                    margin-bottom:16px;
+                    color:$black;
+                }
+                p{
+                    font-size:18px;
+                    color:$text-color;
+                }
+            }
+            .interested{
+                margin:30px 0 50px 0;
+                p{
+                    font-size:18px;
+                    color:$black;
+                    font-weight: 600;
+                    &.error{
+                        font-size:$text-sm;
+                        margin-top:8px;
+                        font-weight: normal;
+                    }
+                }
+                .item-list{
+                    @extend .d-flex;
+                    justify-content: flex-start;
+                    gap:15px;
+                    flex-wrap: nowrap;
+                    margin-top:20px;
+                    .item{
+                        padding:15px 25px;
+                        border: 1px solid $text-color;
+                        border-radius: 99999px;
+                        background-color: $white;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &.filled{
+                            color:$white;
+                            border-color:transparent;
+                        }
+                    }
+                }
+            }
+            .request{
+                font-size:18px;
+                color:$black;
+                margin-bottom:20px;
+            }
+            .contact-form{
+                display: block;
+                width:100%;
+                .input-container{
+                    @extend .d-flex;
+                    justify-content: space-between;
+                    gap:4%;
+                    .input-control{
+                        width:48%;
+                        margin-bottom:30px;
+                        label{
+                            display: block;
+                            margin-bottom:8px;
+                            font-size:$text-sm;
+                            color:$black;
+                        }
+                        p{
+                            font-size:$text-sm;
+                            margin-top:8px;
+                        }
+                        input,
+                        select,
+                        textarea{
+                            width:100%;
+                            height:46px;
+                            border:1px solid #dbdfe5;
+                            outline:none;
+                            background-color: $white;
+                            color:$black;
+                            font-size:$text-sm;
+                            padding:2px 15px;
+                            border-radius: 8px;
+                            &:hover{
+                                outline: none;
+                            }
+                        }
+                        textarea{
+                            height:100px;
+                        }
+                        &.text-area{
+                            width:100%;
+                        }
+                    }
+                }
+                .btn{
+                    &.send-message{
+                        padding:0;
+                        width:200px;
+                        height:56px;
+                        color:$white;
+                        font-size:$text-sm;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    &:hover{
+                        outline:none;
+                    }
+                }
+            }
+        }
+        .container-map{
+            margin-top:40px;
+            border-radius: 16px;
+            background-color: $white;
+            box-shadow: 0 1px 2px 0 rgba(26, 31, 44, .25); 
+            padding: 60px;
+        }
+    }
+
+    .icon-set{
+        @extend .d-flex;
+        width:40px;
+        height:40px;
+        border-radius: 8px;
+        background-color: $white;
+        border:1px solid #dbdfe5;
+        cursor: pointer;
+        .fa{
+            font-size: 18px;
+            color:$titles-color;
+        }
+        +.icon-set{
+            margin-left:10px;
+        }
+    }
+}
+

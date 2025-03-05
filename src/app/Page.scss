@@ -1,0 +1,10 @@
+@use "../components/styles/Component.scss" as component;
+.content-wrapper{
+  margin-top:80px;
+  .section-blog-post{   
+      @extend %d-flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap:60px;
+  }
+}

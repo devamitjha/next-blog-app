@@ -1,4 +1,4 @@
-@import "../styles/Component.scss";
+@use "../styles/Component.scss" as component;
 .section-blog-sidebar{
     width:32%;
     display:block;
@@ -6,27 +6,27 @@
 .section-title{
     margin-bottom:25px;
     span{
-        font-size:$text-md;
-        color:$black;
+        font-size:component.$text-md;
+        color:component.$black;
         font-weight: 800;
     }
 }
 .widget{
-    background-color: $boxes-background-color;
+    background-color: component.$boxes-background-color;
     padding: 35px 40px;
     border-radius: 15px;
-    border:1px solid $boxes-border-color;
+    border:1px solid component.$boxes-border-color;
     &.about{        
         .meta{
-            @extend .d-flex;
+            @extend %d-flex;
             justify-content: flex-start;
             .avatar{
-                @extend .d-flex;
+                @extend %d-flex;
                 width:70px;
                 height:70px;
                 overflow: hidden;
                 border-radius: 100%;
-                box-shadow: $medium-shadow;
+                box-shadow: component.$medium-shadow;
                 margin-right:20px;
                 img{
                     display: block;
@@ -38,21 +38,21 @@
            }
            .author-name{
                 h4{
-                    font-size:$text-sm;
-                    color:$black;
+                    font-size:component.$text-sm;
+                    color:component.$black;
                 }
                 span{
-                    font-size:$text-xsm;
-                    color:$text-color-light;
+                    font-size:component.$text-xsm;
+                    color:component.$text-color-light;
                 }
            }           
         }
         .bio{
             margin-top:25px;
             p{
-                font-size:$text-sm;
+                font-size:component.$text-sm;
                 line-height: 1.8;
-                color:$black;
+                color:component.$black;
             }
        }
     }
@@ -61,22 +61,22 @@
     }
     &.social{
         .meta{
-            @extend .d-flex;
+            @extend %d-flex;
             gap:15px;
             justify-content: space-between;
         }
         .item{
             width:33.33%;
-            background-color:$boxes-background-color;
-            border:1px solid $boxes-border-color;
+            background-color:component.$boxes-background-color;
+            border:1px solid component.$boxes-border-color;
             border-radius: 8px;
-            @extend .d-flex;
+            @extend %d-flex;
             height:80px;
             position: relative;
             transition:all .3s ease-in-out;
             text-decoration: none;
             .fa{
-                font-size:$text-md;
+                font-size:component.$text-md;
                 &.fa-facebook{
                     color:#1877F2;
                 }

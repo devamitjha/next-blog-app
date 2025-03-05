@@ -1,12 +1,17 @@
 import React from 'react';
 import "./Footer.scss";
 import Link from 'next/link';
+import Image from 'next/image';
 import TitleDecoration from '../titleDecoration/TitleDecoration';
 import FeaturePost from '../featurePost/FeaturePost';
+import svgImg from "@/assets/images/paper.svg";
 
 const Footer = () => {
   return (
-    <div className="container full-width footer-container">
+    <div className="container full-width footer-container"> 
+      <div className="shape">
+        <Image className="svg" src={svgImg} alt="paper design"/>
+        </div>
       <div className="container relative">
         <div className="section-footer">
           <div className="item section-newsletter">

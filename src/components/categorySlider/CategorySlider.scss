@@ -1,10 +1,10 @@
-@import "../styles/Component.scss";
+@use "../styles/Component.scss" as component;
 .slider-small{
     position: relative;
     .categories-details{
         .cat-image{
-            @extend .d-flex;
-            box-shadow: $small-shadow;  
+            @extend %d-flex;
+            box-shadow: component.$small-shadow;  
             overflow: hidden;  
             border-radius: 8px;                             
             img{
@@ -18,11 +18,11 @@
             display:block;
             margin-top: 20px; 
             h2{
-                font-size:$text-sm;
+                font-size:component.$text-sm;
             }
             .count{
-                font-size:$text-xsm;
-                color:$black;
+                font-size:component.$text-xsm;
+                color:component.$black;
                 margin-top:8px;
             }
         }
@@ -31,9 +31,9 @@
         position: absolute;
         bottom:0;
         right:0;
-        @extend .d-flex;
+        @extend %d-flex;
         .btn{
-            @extend .d-flex;
+            @extend %d-flex;
             width:35px;
             height:35px;
             border-radius: 100%;
@@ -43,7 +43,7 @@
                 margin-left:8px;
             }
             .fa{
-                color:$white;
+                color:component.$white;
                 font-size:14px;
             }
         }

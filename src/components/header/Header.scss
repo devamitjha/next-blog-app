@@ -1,40 +1,50 @@
-@import "../styles/Component.scss";
-header{
-    height:100px;
+@use "../styles/Component.scss" as component;
+
+header {
+    height: 100px;
     background-color: transparent;
-    @extend .d-flex;   
-    ul{
-        @extend .d-flex;
+    @extend %d-flex;   // Use % instead of . if it's a placeholder in styles/Component.scss" as component;
+    
+    ul {
+        @extend %d-flex; // Same here for placeholders
         list-style: none;
-        li{
-            font-size:$text-sm;
-            padding:10px 15px;   
-            color:$black;
-            a{
-                color:inherit;
+
+        li {
+            font-size: component.$text-sm;
+            padding: 10px 15px;   
+            color: component.$black;
+
+            a {
+                color: inherit;
                 text-decoration: none;
-                &.active{
-                    color:$primary;
+
+                &.active {
+                    color: component.$primary;
                 }
             }
         }
-    } 
-    .logo{
-        font-size:$text-lg;
-        width:6vw;
     }
-    .menu-center{
-        flex:1
+
+    .logo {
+        font-size: component.$text-lg;
+        width: 6vw;
     }
-    .menu-right{
-        ul{
+
+    .menu-center {
+        flex: 1;
+    }
+
+    .menu-right {
+        ul {
             justify-content: end;
-            li{
-                &.btn{
-                    color:$white;
-                    &.outline{
-                        color:$black;
-                        margin-left:15px;
+
+            li {
+                &.btn {
+                    color: component.$white;
+
+                    &.outline {
+                        color: component.$black;
+                        margin-left: 15px;
                     }
                 }
             }

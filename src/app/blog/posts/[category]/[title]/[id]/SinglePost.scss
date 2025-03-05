@@ -1,8 +1,8 @@
-@import "../../../../../../components/styles/Component.scss";
+@use "../../../../../../components/styles/Component.scss" as component;
 .content-wrapper {
     margin-top: 80px;
     .section-blog-post{   
-        @extend .d-flex;
+        @extend %d-flex;
         justify-content: space-between;
         align-items: flex-start;
         gap:60px;
@@ -10,17 +10,17 @@
 }
 .post-detail-page{
     .section-post-title{
-        @extend .d-flex;
+        @extend %d-flex;
         width:70%;
         margin:0 auto;
         .post-title-container{
             width:100%;
             .category-name{
-                background-color: rgba($primary, .2);
+                background-color: rgba(component.$primary, .2);
                 display: inline-block;
                 padding:5px 10px;
                 border-radius: 99999px;
-                color:$primary;
+                color:component.$primary;
                 margin-bottom:20px;
                 h6{
                     font-size:12px;
@@ -29,28 +29,28 @@
                 }
             }
             h2{
-                font-size:$text-xxl;
+                font-size:component.$text-xxl;
                 line-height: 1.2;
                 font-weight: 800;
-                color:$black;
+                color:component.$black;
             }
             .section-author{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content: space-between;
                 width:100%;
                 margin-top:20px;
-                border-top: 1px solid $boxes-border-color;
+                border-top: 1px solid component.$boxes-border-color;
                 padding-top:30px;
                 margin-bottom:50px;
                 .meta{
                     .author-bio{
-                        @extend .d-flex;
+                        @extend %d-flex;
                         .img{
-                            @extend .d-flex;
+                            @extend %d-flex;
                             width:45px;
                             height:45px; 
                             overflow: hidden;
-                            border:1px solid $boxes-border-color;
+                            border:1px solid component.$boxes-border-color;
                             border-radius: 100%;
                             img{
                                 display: block;
@@ -61,22 +61,22 @@
                         }
                         .author-name{
                             p{
-                                font-size:$text-sm;
+                                font-size:component.$text-sm;
                                 margin-left:12px;
                                 span{
-                                    color:$primary;
+                                    color:component.$primary;
                                     font-weight: 600;
                                     transition:color .3s ease-in-out;
                                 }
                                 &:hover{
                                     span{
-                                        color:$black;
+                                        color:component.$black;
                                     }
                                 }
                             }
                             .time{
-                                font-size:$text-xsm;
-                                color:$text-color;
+                                font-size:component.$text-xsm;
+                                color:component.$text-color;
                                 .dot{
                                     margin-left:10px;
                                 }
@@ -88,34 +88,34 @@
 
                 }
                 .social{
-                    @extend .d-flex;
+                    @extend %d-flex;
                     justify-content: space-between;
                     .icon-box{
                         padding:10px 15px;
-                        color:$text-color;
+                        color:component.$text-color;
                         cursor: pointer;
                         border-radius: 99999px;
-                        background-color: rgba($black, .03);
+                        background-color: rgba(component.$black, .03);
                         transition: background-color .1s ease-in-out;
                         .fa{
-                            font-size:$text-sm;
+                            font-size:component.$text-sm;
                             &.fa-comment-o{
                                 transform: scaleX(-1);
                             }
                         }
                         span{
-                            font-size:$text-sm;
+                            font-size:component.$text-sm;
                             margin-left:4px;
                         }
                         &:hover{
-                            background-color: rgba($black, .05);
+                            background-color: rgba(component.$black, .05);
                         }
                         &.value{
                             background-color:transparent;
                             &:hover{
-                                background-color: rgba($primary, .2);
+                                background-color: rgba(component.$primary, .2);
                                 .fa, span{
-                                    color:$primary;                                
+                                    color:component.$primary;                                
                                 }
                             }
                         }
@@ -136,7 +136,7 @@
             width:100%;
             height:450px;
             border-radius: 15px;
-            box-shadow: $medium-shadow;
+            box-shadow: component.$medium-shadow;
             overflow: hidden;
             img{
                 display:block;
@@ -151,17 +151,17 @@
             margin-top:50px;
             p{
                 margin:0 0 20px 0;
-                font-size:$post-text;
-                color:$black;
+                font-size:component.$post-text;
+                color:component.$black;
                 line-height: 1.7;
             }
         }
         .section-tags{
             margin:30px 0;
             padding:30px 0 15px 0;
-            border-top:1px solid $boxes-border-color;
+            border-top:1px solid component.$boxes-border-color;
             ul{
-                @extend .d-flex;
+                @extend %d-flex;
                 margin:0;
                 padding:0;
                 width:100%;
@@ -170,17 +170,17 @@
                 justify-content: flex-start;
                 list-style-type: none;
                 li{                    
-                    border:1px solid $boxes-border-color;
+                    border:1px solid component.$boxes-border-color;
                     border-radius: 99999px;                   
                     transition: all .1s ease-in-out;
                     a{
                         padding:8px 15px;
-                        @extend .d-flex;
-                        font-size: $text-xsm;
-                        color:$black;
+                        @extend %d-flex;
+                        font-size: component.$text-xsm;
+                        color:component.$black;
                     }
                     &:hover{
-                        background-color:$boxes-background-color;
+                        background-color:component.$boxes-background-color;
                     }
                 }
             }
@@ -191,7 +191,7 @@
             span{
                 position: relative;
                 z-index: 2;
-                background-color: $white;
+                background-color: component.$white;
                 padding-right:15px;
             }
             &:after{
@@ -199,7 +199,7 @@
                 content:"";
                 width:100%;
                 height:1px;
-                background-color:$boxes-border-color;
+                background-color:component.$boxes-border-color;
                 left:12vw;
                 top:15px;
                 z-index: 1;
@@ -212,15 +212,15 @@
 //author card
 .author-card{
     padding:10px 0 10px 50px;
-    @extend .d-flex;
+    @extend %d-flex;
     justify-content: space-between;
     .author-avatar{
-        @extend .d-flex;
+        @extend %d-flex;
         width:200px;
         height:200px;
         overflow: hidden;
         border-radius: 100%;
-        box-shadow: $medium-shadow;
+        box-shadow: component.$medium-shadow;
         margin-right:20px;
         img{
             display:block;
@@ -233,17 +233,17 @@
         width:calc(100% - 250px);
         span{
             font-size:10px;
-            color:$text-color;
+            color:component.$text-color;
             text-transform: uppercase;
         }
         h3{
-            font-size:$text-md;
-            color:$black;
+            font-size:component.$text-md;
+            color:component.$black;
             margin:5px 0 12px 0;
         }
         p{
-            font-size:$text-sm;
-            color:$black;
+            font-size:component.$text-sm;
+            color:component.$black;
             line-height: 1.7;
         }
         .viewAll{
@@ -251,8 +251,8 @@
             height:46px;
             width:140px;
             margin-top:16px;
-            @extend .d-flex;
-            color:$white;
+            @extend %d-flex;
+            color:component.$white;
         }
     }
 }
@@ -260,7 +260,7 @@
 .related-article{
     margin-top:40px;
     .meta{
-        @extend .d-flex;
+        @extend %d-flex;
         justify-content: space-between;
         gap:30px;
         align-items: start;
@@ -272,28 +272,28 @@
 
 //comment
 .parent-container{
-    @extend .d-flex;
+    @extend %d-flex;
     flex-direction: column;
     width:100%;
 }
 .post-comment{
     padding:50px 0;
     margin-top:40px;
-    border-top:1px solid $light-gray;
-    border-bottom:1px solid $light-gray;
-    @extend .d-flex;
+    border-top:1px solid component.$light-gray;
+    border-bottom:1px solid component.$light-gray;
+    @extend %d-flex;
     flex-direction: column;
     .is-user{
-        @extend .d-flex;
+        @extend %d-flex;
         flex-direction: column;
         h2{
-            font-size:$text-md;
-            color:$black;
+            font-size:component.$text-md;
+            color:component.$black;
             margin-bottom:10px;
         }
         p{
-            font-size:$text-sm;
-            color:$text-color;
+            font-size:component.$text-sm;
+            color:component.$text-color;
             margin:0;
             margin-bottom:25px;
         }
@@ -301,32 +301,32 @@
             padding:0;
             width:140px;
             height:46px;
-            @extend .d-flex;
-            color:$white;
-            font-size:$text-sm;
+            @extend %d-flex;
+            color:component.$white;
+            font-size:component.$text-sm;
             font-weight: 600;
             margin-bottom:10px;
             cursor:pointer;
         }
         span{
-            font-size:$text-sm;
-            color:$text-color;
+            font-size:component.$text-sm;
+            color:component.$text-color;
             margin:0;
             a{
-                color:$primary;
+                color:component.$primary;
             }
         }
     }
     .conment-input{
         width:100%;
-        background-color:$boxes-background-color;
-        border:1px solid $boxes-border-color;
+        background-color:component.$boxes-background-color;
+        border:1px solid component.$boxes-border-color;
         padding:25px 15px;
         border-radius: 15px;
         h3{
             margin-bottom:15px;
-            color:$black;
-            font-size: $text-md;
+            color:component.$black;
+            font-size: component.$text-md;
         }
         .comment-form{
             position: relative;
@@ -341,27 +341,27 @@
                 &.input-textarea{
                     width: 100%;
                     border-radius: 8px;
-                    background: $white;
+                    background: component.$white;
                     padding: 15px;
-                    font-size: $text-sm;
+                    font-size: component.$text-sm;
                     resize: vertical;
-                    color:$black;
+                    color:component.$black;
                 }
               }
             .btn-group{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content: flex-start;
                 margin-top:25px;
                 .btn{
                     padding:0;
                     width:130px;
                     height:46px;
-                    @extend .d-flex;
+                    @extend %d-flex;
                     cursor: pointer;
-                    font-size:$text-sm;
+                    font-size:component.$text-sm;
                     border-radius: 99999px;
                     &.filled{
-                        color:$white;
+                        color:component.$white;
                     }
                     +.btn{
                         margin-left:15px;
@@ -373,9 +373,9 @@
 
     //reply
     .comment-reply{
-        border:1px solid $light-gray;
+        border:1px solid component.$light-gray;
         border-radius: 15px;
-        background-color:$white;
+        background-color:component.$white;
         padding:15px;
         margin-left:50px;
         position:relative;
@@ -390,7 +390,7 @@
             width:35px;
             height:35px;
             border-radius: 100%;
-            @extend .d-flex;
+            @extend %d-flex;
             overflow: hidden;
             left:-50px;
             top:20px;
@@ -403,42 +403,42 @@
         }
         .comment-text{
             .author-name{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content: flex-start;
                 margin-bottom:12px;
                 a{
-                    font-size:$text-sm;
-                    color:$primary;
+                    font-size:component.$text-sm;
+                    color:component.$primary;
                     transition:color .1s ease-in-out;
                     font-weight: 600;
                     &:hover{
-                        color:$black;
+                        color:component.$black;
                     }
                 }
                 .date{
                     font-size:12px;
-                    color:$text-color;
+                    color:component.$text-color;
                 }
             }
             p{
                 margin:0;
-                font-size:$text-sm;
-                    color:$black;
+                font-size:component.$text-sm;
+                    color:component.$black;
             }
             .reply-group{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content: flex-start;
                 margin-top: 16px;
                 .like-btn{
                     padding:8px 15px;
-                    background-color:rgba($black, .03);
+                    background-color:rgba(component.$black, .03);
                     border-radius: 99999px;
-                    color:rgba($black, .9);
+                    color:rgba(component.$black, .9);
                     cursor: pointer;
-                    @extend .d-flex;
+                    @extend %d-flex;
                     justify-content: space-between;
                     span{
-                        font-size:$text-sm;
+                        font-size:component.$text-sm;
                         margin-left:8px;
                     }
                     .reply-svg{
@@ -448,8 +448,8 @@
                         margin-left:15px;
                     }
                     &:hover{
-                        background-color:rgba($primary, .1);
-                        color:$primary;
+                        background-color:rgba(component.$primary, .1);
+                        color:component.$primary;
                     }
                 }
             }
@@ -468,27 +468,27 @@
                         &.input-textarea{
                             width: 100%;
                             border-radius: 8px;
-                            background: $boxes-background-color;
+                            background: component.$boxes-background-color;
                             padding: 15px;
-                            font-size: $text-sm;
+                            font-size: component.$text-sm;
                             resize: vertical;
-                            color:$black;
+                            color:component.$black;
                         }
                       }
                     .btn-group{
-                        @extend .d-flex;
+                        @extend %d-flex;
                         justify-content: flex-start;
                         margin-top:25px;
                         .btn{
                             padding:0;
                             width:130px;
                             height:46px;
-                            @extend .d-flex;
+                            @extend %d-flex;
                             cursor: pointer;
-                            font-size:$text-sm;
+                            font-size:component.$text-sm;
                             border-radius: 99999px;
                             &.filled{
-                                color:$white;
+                                color:component.$white;
                             }
                             +.btn{
                                 margin-left:15px;

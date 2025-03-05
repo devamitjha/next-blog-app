@@ -1,4 +1,4 @@
-@import "../styles/Component.scss";
+@use "../styles/Component.scss" as component;
 .posts-content{   
     &.trending{
         margin-top: 25px;
@@ -11,10 +11,10 @@
         margin-top: 20px;
         .item{
             padding:10px 15px;
-            background-color:$light-gray;
+            background-color:component.$light-gray;
             font-size: 14px;
             border-radius: 20px;
-            @extend .d-flex;
+            @extend %d-flex;
         }
         .swiper {
             padding:0 15px;

@@ -1,9 +1,9 @@
-@import '../styles/Component.scss';
+@use "../styles/Component.scss" as component;
 .section-title{
     position:relative;
     span{
-        font-size:$text-md;
-        color:$black;
+        font-size:component.$text-md;
+        color:component.$black;
         font-weight: 800;
     }
     &.small{    
@@ -23,9 +23,9 @@
     &.big{
         display: flex;
         align-items: center;
-        font-size:$text-xl;
+        font-size:component.$text-xl;
         line-height: 1.3;
-        color:$black;
+        color:component.$black;
         font-weight: 800;
         margin-bottom: 40px;
         &:before{

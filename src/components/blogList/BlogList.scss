@@ -1,15 +1,15 @@
-@import "../styles/Component.scss";
+@use "../styles/Component.scss" as component;
 .section-blog-list{
     width:68%;
     background-color: transparent;
     position: relative;
     .card{
-        @extend .d-flex;
+        @extend %d-flex;
         justify-content: space-between;
         .card-image{
             width:40%;
             border-radius: 15px;            
-            box-shadow: $medium-shadow;
+            box-shadow:component.$medium-shadow;
             img{
                 display: block;
                 width:100%;
@@ -25,7 +25,7 @@
             .card-title{
                 margin-bottom: 15px;
                 h2{
-                    font-size: $text-lg;   
+                    font-size: component.$text-lg;   
                     @extend .line-clamp;        
                     -webkit-line-clamp: 2;
                     line-clamp: 2;
@@ -33,16 +33,16 @@
                 }
             }  
             .meta{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content:start;
                 .author-bio{
-                    @extend .d-flex;
+                    @extend %d-flex;
                     justify-content: flex-start;
                     text-decoration: none;
                     .img{
                         width:40px;
                         height:40px;
-                        @extend .d-flex;
+                        @extend %d-flex;
                         border-radius: 100%;
                         overflow: hidden;
                         margin-right:8px;
@@ -53,15 +53,15 @@
                         }
                     }
                     .author-name{
-                        font-size:$text-xsm;
+                        font-size:component.$text-xsm;
                         & span{
-                            color:$primary;
+                            color:component.$primary;
                         }
                     }
                 }
                 .time{
-                    font-size:$text-xsm;
-                    color:$text-color-light;
+                    font-size:component.$text-xsm;
+                    color:component.$text-color-light;
                     margin-left: 12px;
                     .dot{
                         margin-right: 12px;
@@ -73,7 +73,7 @@
                 margin-top:15px;
                 p{
                     margin:0;
-                    font-size:$text-sm;
+                    font-size:component.$text-sm;
                     line-height: 1.5;
                     @extend .line-clamp;        
                     -webkit-line-clamp: 2;
@@ -81,18 +81,18 @@
                 } 
             }
             .btn-group{
-                @extend .d-flex;
+                @extend %d-flex;
                 justify-content: space-between;
                 margin-top: 30px;
                 .btn{
-                    font-size:$text-sm;
-                    color:$white;
+                    font-size:component.$text-sm;
+                    color:component.$white;
                     font-weight: 600;
                     line-height: 1.8;
                 }
                 .time{
-                    font-size:$text-xsm;
-                    color:$text-color-light;
+                    font-size:component.$text-xsm;
+                    color:component.$text-color-light;
                 }
             }
         }  

@@ -1,0 +1,50 @@
+.background-shapes{
+    .common-shape {
+        animation: rotateAnimation 60s linear infinite
+    }
+    .shape-1 {
+        position: fixed;
+        top: -20%;
+        left: -20%;
+        z-index: -1;
+        @media(max-width:1024px){
+            top: -50%;
+            left: -80%;
+        }
+    }
+    .shape-2 {
+        position: fixed;
+        bottom: -20%;
+        right: -20%;
+        z-index: -1;
+        @media(max-width:1024px){
+            bottom: -50%;
+            right: -80%;
+        }
+    }
+    .threed-shape-1 {
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        z-index: -1;
+    }
+    .threed-shape-2 {
+        position: fixed;
+        bottom: 20%;
+        right: 9%;
+        z-index: -1;
+        @media(max-width:1024px){
+           display: none;
+        }
+    }
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotate(0deg)
+        }
+    
+        to {
+            transform: rotate(1turn)
+        }
+    }
+    
+}

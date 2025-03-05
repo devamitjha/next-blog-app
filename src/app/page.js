@@ -3,6 +3,7 @@ import BlogList from "@/components/blogList/BlogList";
 import HeroSlider from "@/components/heroSlider/HeroSlider";
 import HomeWave from "@/components/homeWave/HomeWave";
 import TitleDecoration from "@/components/titleDecoration/TitleDecoration";
+import "./Page.scss";
 
 export default function Home() {
   return (

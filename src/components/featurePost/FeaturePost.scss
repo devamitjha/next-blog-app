@@ -1,13 +1,13 @@
-@import "../styles/Component.scss";
+@use "../styles/Component.scss" as component;
 
 .article{
-    @extend .d-flex;
+    @extend %d-flex;
     justify-content: space-between;
     .thumb{
         width:120px;
         height:120px;
-        @extend .d-flex;
-        box-shadow: $small-shadow;
+        @extend %d-flex;
+        box-shadow: component.$small-shadow;
         overflow: hidden;
         border-radius: 8px;
         transition:all .3s ease-in-out;
@@ -24,9 +24,9 @@
     .details{
         width:calc(100% - 135px);
         h4{
-            font-size:$text-xsm;
+            font-size:component.$text-xsm;
             line-height: 1.6;
-            color:$titles-color;
+            color:component.$titles-color;
         }
         .featured-date{           
             margin-top:8px;
@@ -34,20 +34,20 @@
                 margin-left:0;
             }
             span{
-                color:$text-color;
+                color:component.$text-color;
                 margin-left:2px;
                 font-size:12px;
             }
         }
         .author{
-            font-size:$text-xsm;
-            color:$black;
+            font-size:component.$text-xsm;
+            color:component.$black;
             margin-top:8px;
             .dot{
                 margin-left:0;
             }
             span{
-                color:$primary;
+                color:component.$primary;
                 margin-left:2px;
                 font-weight: 600;
             }

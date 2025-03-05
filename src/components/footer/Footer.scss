@@ -1,16 +1,30 @@
-@import "../styles/Component.scss";
+@use "../styles/Component" as *;
 .relative{
     position: relative;
     z-index: 2;
 }
 .container{
     &.footer-container{
-        border-top:1px solid $boxes-border-color;
+        //border-top:1px solid $boxes-border-color;
         background-color:$boxes-background-color;
         margin-top: 80px;
         padding-bottom:40px;
         position: relative;
         overflow: hidden;
+        .shape{
+            left: 0;
+            position: absolute;
+            top: -13px;
+            transform: rotate(180deg); 
+            width: 100%;
+            z-index: 2;
+            .svg {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
         .copyright{
             @extend .d-flex;
             margin-top:20px;
